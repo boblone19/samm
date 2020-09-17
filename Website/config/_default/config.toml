@@ -27,21 +27,72 @@ paginate = 10
     weight = 2
 
 [[menu.main]]
+    name = "Community"
+    identifier = "community"
+    url  = ""
+    weight = 7
+
+[[menu.main]]
     name = "Blog"
+    parent = "community"
     url  = "/blog/"
     weight = 3
 
 [[menu.main]]
     name = "Events"
     identifier = "events"
+    parent = "community"
     url  = "/events/"
     weight = 4
 
 [[menu.main]]
     name = "Sponsors"
     identifier = "sponsors"
+    parent = "community"
     url  = "/sponsors/"
     weight = 5
+
+[[menu.main]]
+    name = "FAQ"
+    parent = "community"
+    url  = "/faq/"
+    weight = 6
+
+[[menu.main]]
+    name = "Contributing"
+    parent = "community"
+    url  = "/contributing/"
+    weight = 7
+
+[[menu.main]]
+    name = "Guidance"
+    identifier = "guidance"
+    url  = ""
+    weight = 6
+
+[[menu.main]]
+    name = "Getting started"
+    parent = "guidance"
+    url  = "/guidance/quick-start-guide/"
+    weight = 5
+
+[[menu.main]]
+    name = "Agile"
+    parent = "guidance"
+    url  = "/guidance/agile/"
+    weight = 7
+
+[[menu.main]]
+    name = "Assessment"
+    parent = "guidance"
+    url  = "/assessment/"
+    weight = 6
+
+[[menu.main]]
+    name = "Benchmarking"
+    parent = "guidance"
+    url  = "/benchmarking/"
+    weight = 7
 
 #[[menu.main]]
 #    name = "Version 1.5"
@@ -51,12 +102,18 @@ paginate = 10
 # [[menu.main]]
 #     name = "FAQ"
 #     url  = "/faq/"
+
 #     weight = 7
+
+[[menu.main]]
+    name = "User Day"
+    url  = "/user-day/"
+    weight = 8
 
 [[menu.main]]
     name = "Contact"
     url  = "/contact/"
-    weight = 8
+    weight = 9
 
 # Top bar social links menu
 
@@ -86,9 +143,16 @@ paginate = 10
 
 [[menu.topbar]]
     weight = 5
+    name = "YouTube"
+    url = "https://www.youtube.com/channel/UCEZDbvQrj5APg5cEET49A_g"
+    pre = "<i class='fa fa-2x fa-youtube'></i>"
+
+[[menu.topbar]]
+    weight = 6
     name = "Email"
     url = "mailto:info@owaspsamm.org"
     pre = "<i class='fa fa-2x fa-envelope'></i>"
+
 
 [params]
     viewMorePostLink = "/blog/"
@@ -214,3 +278,6 @@ paginate = 10
     enable = true
     title = "From our blog"
     subtitle = "Be an OWASP SAMM contributor and tell us about your experience using our maturity model in guest articles. Get in touch with us to share your SAMM story."
+
+[markup.goldmark.renderer]
+    unsafe = true
